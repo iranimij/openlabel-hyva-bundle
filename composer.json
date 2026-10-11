@@ -20,5 +20,10 @@
         "iranimij/module-base": "^1.0",
         "iranimij/openlabel": "^1.0",
         "iranimij/openlabel-hyva": "^1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
     }
 }
