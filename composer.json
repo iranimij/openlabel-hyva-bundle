@@ -1,0 +1,24 @@
+{
+    "name": "iranimij/openlabel-hyva-bundle",
+    "description": "OpenLabel for Hyvä in one require: product labels for Magento 2 and Hyvä (core, Hyvä render package and the shared base module). Free and MIT.",
+    "type": "metapackage",
+    "license": "MIT",
+    "keywords": ["magento2", "mage-os", "hyva", "product-labels", "badges", "stickers", "openlabel"],
+    "homepage": "https://github.com/iranimij/openlabel",
+    "support": {
+        "issues": "https://github.com/iranimij/openlabel/issues",
+        "source": "https://github.com/iranimij/openlabel-hyva-bundle",
+        "docs": "https://github.com/iranimij/openlabel/tree/main/docs"
+    },
+    "authors": [
+        {
+            "name": "Iman Aboheydary",
+            "homepage": "https://github.com/iranimij"
+        }
+    ],
+    "require": {
+        "iranimij/module-base": "^1.0",
+        "iranimij/openlabel": "^1.0",
+        "iranimij/openlabel-hyva": "^1.0"
+    }
+}

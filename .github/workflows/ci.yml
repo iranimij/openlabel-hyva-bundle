@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: composer validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate the metapackage
+        run: composer validate --strict --no-check-lock
+
+  ci-ok:
+    name: ci-ok
+    if: always()
+    needs: [validate]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if any job failed or was skipped
+        run: |
+          if echo '${{ toJSON(needs) }}' | grep -Eq '"result": "(failure|cancelled|skipped)"'; then exit 1; fi
